@@ -4,21 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="todo-app">
-        <h1>To-Do List <img src="images/icon.png" /></h1>
-        <div class="row">
-          <input type="text" id="input-box" placeholder="Add your task" />
-          <button onclick="addTask()">Add</button>
+      <div class="todo-wrapper">
+        <div class="steps">
+          <h2>STEPS:</h2>
+          <ol>
+            <li>Create the HTML Structure</li>
+            <li>Style the app with CSS</li>
+            <li>
+              Add functionality with JavaScript
+              <ol>
+                <li>add a new task</li>
+                <li>save the task that has to be completed</li>
+                <li>if it is completed mark it as completed</li>
+                <li>delete the task</li>
+                <li>store the task list in your web browser</li>
+              </ol>
+            </li>
+          </ol>
         </div>
-        <ul id="list-container">
-          <!-- <li class="checked">Task 1</li>
-          <li>Task 2</li>
-          <li>Task 3</li> -->
-        </ul>
+        <div class="todo-app">
+          <h2>To-Do List</h2>
+          <div class="row">
+            <input type="text" id="input-box" placeholder="Add your task" />
+            <button class="add-task">Add</button>
+          </div>
+          <div class="error-message"></div>
+          <ul id="list-container"></ul>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
